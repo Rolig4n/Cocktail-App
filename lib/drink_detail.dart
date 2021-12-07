@@ -11,7 +11,7 @@ class DrinkDetail extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
-        myColor,
+        Colors.brown,
         Colors.orange,
       ])),
       child: Scaffold(

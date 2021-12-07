@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercocktail/homepage.dart';
 
-const Color myColor = Colors.brown;
-
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Cocktail App",
       theme: ThemeData(
-        primarySwatch: myColor,
+        primarySwatch: Colors.brown,
         fontFamily: "Pacifico",
       ),
       home: HomePage(),

@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
-        myColor,
+        Colors.brown,
         Colors.orange,
       ])),
       child: Scaffold(

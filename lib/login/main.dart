@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercocktail/login/base_screen.dart';
 import 'package:fluttercocktail/login/login_screen.dart';
+import 'package:fluttercocktail/notification/chat_notification_service.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -10,7 +12,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Provider(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ChatNotificationService(),
+        ),
+      ],
       child: MaterialApp(
         title: 'traBARlho',
         debugShowCheckedModeBanner: false,

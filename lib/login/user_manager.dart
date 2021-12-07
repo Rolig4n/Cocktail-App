@@ -13,7 +13,7 @@ class UserManager extends ChangeNotifier {
   final FirebaseAuth auth = FirebaseAuth.instance;
   final Firestore firestore = Firestore.instance;
 
-  User user;
+  User user = new User(email: '', password: '', name: '', cpf: '', id: '');
 
   bool _loading = false;
   bool get loading => _loading;
@@ -68,7 +68,7 @@ class UserManager extends ChangeNotifier {
 
   void signOut() {
     auth.signOut();
-    user = null;
+    user;
     notifyListeners();
   }
 

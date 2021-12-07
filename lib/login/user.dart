@@ -5,7 +5,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:fluttercocktail/login/address.dart';
 
 class User {
-  User({this.email, this.password, this.name, this.id});
+  User({this.email, this.password, this.name, this.cpf, this.id});
 
   User.fromDocument(DocumentSnapshot document) {
     id = document.documentID;
@@ -18,13 +18,13 @@ class User {
     }
   }
 
-  String id;
-  String name;
-  String email;
-  String cpf;
-  String password;
+  String id = '';
+  String name = '';
+  String email = '';
+  String cpf = '';
+  String password = '';
 
-  String confirmPassword;
+  String confirmPassword = '';
 
   bool admin = false;
 
